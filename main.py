@@ -144,9 +144,9 @@ print("OK!")
 model = Sequential()
 model.add(Flatten(input_shape=(7,7,512)))
 model.add(Dense(activation="relu", units=1024, kernel_initializer="uniform"))
-model.add(Dropout(0.5))
+model.add(Dropout(0.3))
 model.add(Dense(activation="relu", units=1024, kernel_initializer="uniform"))
-model.add(Dropout(0.5))
+model.add(Dropout(0.3))
 model.add(Dense(activation="softmax", units=120, kernel_initializer="uniform"))
 # end
 

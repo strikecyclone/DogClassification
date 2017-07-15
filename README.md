@@ -9,13 +9,17 @@
 
 ```
 Epoch 500/500
-120000/120000 [==============================] - 180s - loss: 3.8973 - acc: 0.7559
+120000/120000 [==============================] - 183s - loss: 1.7354 - acc: 0.8910
 ```
 
 ```
-				precision    recall  f1-score   support
-avg / total       0.49      0.58      0.52      8580
+	precision    recall  f1-score   support
+avg / total       0.61      0.64      0.62      8580
 ```
+
+# 更新日志
+## v0.0.2
+将dropout从0.5降到0.3后，precision、recall、f1-score都上升到了0.6（之前都在0.5）
 
 # 关于数据
 使用的是[Stanford Dogs Dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)数据集，类别有120类，图片共有20580张，其中训练集12000张，测试集8580张。需要下载的部分包括Images（757MB的图片压缩包）、Train Features和Test Features（1.2GB+850MB的matlab文件，用于把数据分为训练集和测试集合，不过好像下载Lists这个0.5MB的压缩包就可以了，不过在main.py中的代码需要更改下）
@@ -31,8 +35,6 @@ avg / total       0.49      0.58      0.52      8580
 * pillow (3.4.3)
 * scipy (0.19.1)
 * numpy (1.12.1)
-
-
 
 # 使用方法
 改好数据的路径后，直接执行`python main.py`即可
